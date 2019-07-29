@@ -26,8 +26,6 @@
 %\parindent=20pt  % -------------------首行缩进大小，英文分段就直接0pt了吧。
 \setlength{\parindent}{2.1em}
 \setlength{\parskip}{0.3\baselineskip}
-\newcommand{\nrcore}{Core Nebulas Rank}
-\newcommand{\nrext}{Extended Nebulas Ranks}
 \newcommand{\dom}{{\; \texttt{dom}\;}}
 \newcommand{\xpcomment}[1]{{\color{blue} #1}}
 
@@ -58,10 +56,10 @@
     \vspace{0.5cm}
 
 
-    \textbf{\huge{白皮书：NAX 机制设计}}
+    \textbf{\huge{星云链NAX白皮书}}
 
     \vspace{0.5cm}
-    王卓尔
+    作者列表
     \vfill
     2019年7月 \\
     版本号:0.0.1
@@ -70,16 +68,17 @@
 
 \end{titlepage}
 \setcounter{page}{0}
-%\thispagestyle{empty}
 \tableofcontents
 \newpage
 \setcounter{page}{1}
-\pagestyle{fancy}	
+\pagestyle{plain}	
 \vspace*{0.01cm}
-\input{target.tex}
-\input{principle.tex}
-\input{core.tex}
-\input{usage.tex}
+\input{vision.tex}
+\input{background.tex}
+\input{tokeneconomy.tex}
+\input{procedure.tex}
+\input{design.tex}
+\input{scenario.tex}
 \input{analysis.tex}
 %\printbibliography
 \newpage
@@ -87,7 +86,8 @@
 
 \newpage 
 \begin{appendices}
+\input{detail.tex}
+\input{supervision.tex}
 \input{changelog.tex}
 \end{appendices}
-
 \end{document}
