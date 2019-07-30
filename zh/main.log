@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  30 JUL 2019 10:32
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  30 JUL 2019 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3253,16 +3253,28 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [1]
 File: ../common/Nebulas.png Graphic file (type bmp)
 <../common/Nebulas.png>
- [2]
+ [2]) (./dao.tex
 File: ../common/Nebulas.png Graphic file (type bmp)
 <../common/Nebulas.png>
- [3]
+ [3]) (./design.tex
 File: ../common/Nebulas.png Graphic file (type bmp)
 <../common/Nebulas.png>
- [4]) (./dao.tex
+ [4]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\(' on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\lambda' on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\)' on input line 66.
+
 File: ../common/Nebulas.png Graphic file (type bmp)
 <../common/Nebulas.png>
- [5]) (./design.tex) (./scenario.tex
+[5]) (./scenario.tex
 File: ../common/Nebulas.png Graphic file (type bmp)
 <../common/Nebulas.png>
  [6]
@@ -3271,8 +3283,7 @@ File: ../common/Nebulas.png Graphic file (type bmp)
  [7]
 File: ../common/Nebulas.png Graphic file (type bmp)
 <../common/Nebulas.png>
-
-[8]) (./analysis.tex)
+ [8]) (./analysis.tex)
 File: ../common/Nebulas.png Graphic file (type bmp)
 <../common/Nebulas.png>
  [9]
@@ -3287,7 +3298,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 92.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5C123E10D798D0D9887D61A3E822C0A5.
+(rerunfilecheck)             Checksum: 7BC5F00C4913663CE4E1C946869A0844.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3295,12 +3306,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
  ) 
 Here is how much of TeX's memory you used:
- 48829 strings out of 492970
- 1181843 string characters out of 6133938
- 1423777 words of memory out of 5000000
- 52173 multiletter control sequences out of 15000+600000
- 535429 words of font info for 60 fonts, out of 8000000 for 9000
+ 48788 strings out of 492970
+ 1177146 string characters out of 6133938
+ 1418777 words of memory out of 5000000
+ 52120 multiletter control sequences out of 15000+600000
+ 538092 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 64i,13n,96p,10439b,952s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,96p,10439b,964s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (13 pages).
