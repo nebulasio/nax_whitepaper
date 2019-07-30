@@ -1,16 +1,16 @@
-\section{使用场景设计}
+\section{NAX 应用场景展望}
 
 各使用场景可以自行设定，奖励，销毁策略。
 
-\subsection{Go Nebulas Platform: 生态激励，贡献，奖励（项目等）}
+\subsection{Go Nebulas平台}
 
 基金会资助Go Nebulas平台的300w NAS, 以及今后系统增发的部分NAS作为资助Go Nebulas平台经费，这些资金也将同时作为质押以获得NAX，作为社区贡献的附加奖励。
 
-\subsubsection{奖励场景}
+\subsubsection{分发场景}
 
 星云社区化项目制的开放性平台，社区贡献者可以由分为几个角色：社区开发者，社区推广者。社区贡献者通过Go Nebulas上做项目，将会获得NAS的工资奖励， 同时将会获得额外的NAX的社区贡献奖励/凭证，根据项目的优先级，定义不同比例的NAX返比。
 
-\subsubsection{社区贡献者分类}
+社区贡献者分类
 
 \begin{enumerate}[a.]
   \item 项目开发
@@ -36,23 +36,29 @@
 (s < t)
 
 \subsubsection{消耗场景}
-\paragraph{创建提案（消耗相应的NAX）}
-\paragraph{开发提案（开发时会销毁等比的NAX, 提前完成的工作，节省销毁的数量）}
-\paragraph{投票通过提案和结果，需要销毁后NAX（通过或以获得120\%返还，失败可以获得110\%的返还）}
+\begin{enumerate}
+\item 创建提案（消耗相应的NAX）
+\item 开发提案（开发时会销毁等比的NAX, 提前完成的工作，节省销毁的数量）
+\item 投票通过提案和结果，需要销毁后NAX（通过或以获得120\%返还，失败可以获得110\%的返还）
+\end{enumerate}
 
-\subsubsection{推进步骤}
-\paragraph{补发过去参与过贡献的人的奖励？}
-\paragraph{以后获得项目资金的人将获得相应NAX奖励}
-\paragraph{增加GN邀请奖励，受邀请的贡献者获得的NAX后，邀请人会获得额外10\%的NAX}
+推进步骤
+\begin{enumerate}
+\item 补发过去参与过贡献的人的奖励？
+\item 以后获得项目资金的人将获得相应NAX奖励
+\item 增加GN邀请奖励，受邀请的贡献者获得的NAX后，邀请人会获得额外10\%的NAX
+\end{enumerate}
 
-\subsection{投票（Voting）提升社区参与度}
+\subsection{星云治理 - 提升社区参与度}
 为了鼓励社区使用NAX作为社区治理的工具，以及鼓励大家社区治理的参与度，我们将设置一些投票场景，部分场景投票将做会有返还奖励。
 投票的场景
 
-\subsubsection{节点竞选}
+\subsubsection{节点竞选 -- PoD}
 \begin{enumerate}[a.]
   \item 从节点候选人里可以选出节点
   \item 投票销毁后会返还（若当选，获得120\%返还，失败有110\%返还）
+  \item 参与节点竞选, 需要销毁1000W NAX，具体参与需要再调整
+  \item 成为节点, 被选中成为出块节点后，参与到节点出块，需要质押NAS(无NAX返还）
 \end{enumerate}
 
 \subsubsection{理事竞选}
@@ -61,25 +67,12 @@
   \item 投票销毁后会返还（若当选，获得120\%返还，失败有110\%返还）
 \end{enumerate}
 
-\subsubsection{销毁投票}
-\begin{enumerate}[a.]
-  \item 利益相关的投票，投票将没有返还
-  \item 如投票通过销毁3500w部分token，这个投票，将不会返还
-\end{enumerate}
 
-\subsection{当选节点 ---- 一次性销毁门槛}
-
-\subsubsection{参与节点竞选}
-需要销毁1000W NAX，具体参与需要再调整
-
-\subsubsection{成为节点}
-被选中成为出块节点后，参与到节点出块，需要质押NAS(无NAX返还）
-
-
-\subsection{NAS nano Pro \& Explorer \& DEX等各类生态平台的上币费/手续费}
+\subsection{星云生态上币费}
+NAS nano Pro \& Explorer \& DEX等各类生态平台的上币费/手续费
 随着Next DAO的推进以及社区治理的前进，社区里将会出现越来越多的Token和治理尝试。这些币种都将需要相应的工具支持，所需要上NAS nano Pro和Explorer的需求。资源空间有限的情况下，我们可以采取增加上币费的需求，比如需要在NAS nano Pro和Explorer上币的NRC20需要缴纳 500w NAX（参数可调）的上币费。其中20\%归集给NAS nano Pro和Explorer管理团队 （开发者和运营者）80\%会被销毁
 
-\subsection{社区预留NAS销毁计划（单独的方案）x}
+\subsection{社区预留NAS销毁计划}
 与其将3500w NAS一次投票销毁，其实可以把销毁做成一项长期的社区投票活动，由社区来决定这个事情的发生。
 
 销毁细节：
@@ -93,12 +86,3 @@
   \item 支持销毁的比例超出50\%
   \item 投票销毁，只返还50\%
 \end{enumerate}
-
-nax的发行在nextDAO和nebulas.io同时可以看到
-
-Nrc20
-
-DAI, bridge / 其他公链的币可以在nextDAO平台上做映射
-
-
-技术下沉主网需要规划
