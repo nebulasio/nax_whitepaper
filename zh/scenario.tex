@@ -1,88 +1,56 @@
 \section{NAX 应用场景展望}
-
-各使用场景可以自行设定，奖励，销毁策略。
+正如上述，为了让整个系统设计简洁有效，NAX的核心设计逻辑里只有系统增发的简单逻辑，把其他的奖励，销毁逻辑交给了各个使用场景。根据我们的观察，每个使用场景，可以拥有自己特有的激励需求，不宜统一到系统逻辑当中。未来由社区沉淀下来的有效的激励手段，也有可能下沉到核心逻辑的可能。
 
 \subsection{Go Nebulas平台}
+Go Nebulas平台，是星云进一步朝着Autonomous Metanet目标前进的一个重要一节。从星云基金会开始，逐步向社区发散，引入社区的力量，共同建设星云生态和愿景。星云基金会将会投入不少于300万NAS的资金，资助Go Nebulas平台上的项目。
 
-基金会资助Go Nebulas平台的300w NAS, 以及今后系统增发的部分NAS作为资助Go Nebulas平台经费，这些资金也将同时作为质押以获得NAX，作为社区贡献的附加奖励。
+\subsubsection{激励场景}
+为了体现星云的核心理念，在Go Nebulas平台上，一切参与了星云社区建设的贡献者，除了获得项目回报之外，也将会得到相应的NAX的激励。此处NAX的激励来自于星云基金会投资的NAS资金池质押（Staking)所得NAX。具体激励细则将由Go Nebulas平台管理者来共同来决定。
 
-\subsubsection{分发场景}
+在这里，我们可以对NAX在Go Nebulas平台的使用场景的展望：
 
-星云社区化项目制的开放性平台，社区贡献者可以由分为几个角色：社区开发者，社区推广者。社区贡献者通过Go Nebulas上做项目，将会获得NAS的工资奖励， 同时将会获得额外的NAX的社区贡献奖励/凭证，根据项目的优先级，定义不同比例的NAX返比。
-
-社区贡献者分类
-
-\begin{enumerate}[a.]
-  \item 项目开发
-  \item 运营/PR
+提供更高的NAX激励给以下项目类别：
+\begin{enumerate}
+  \item 核心基础建设
   \item 市场拓展
-  \item 拉新
-  \item 基础设施：
-  \item 主网
-\begin{enumerate}[i.]
-  \item NAS nano Pro
-  \item 硬件钱包
-  \item 新钱包对接
-  \item 跨链合作
-\end{enumerate}
+  \item 推广拉新
 \end{enumerate}
 
-为了鼓励社区贡献者的积极性，我们初步确定以下的返NAX比例参数：
-
-普通项目 ：S * x * N (NAS reward)
-
-优先项目（基础设施）：T * x * N (NAS reward)
-
-(s < t)
+更多激励模式：
+\begin{enumerate}
+  \item 奖励过去在Go Nebulas做出杰出贡献的项目
+  \item 邀请新人加入奖励，新人在系统中的贡献激励也会相应奖励给邀请人
+\end{enumerate}
 
 \subsubsection{消耗场景}
+Go Nebulas平台除了是一个投入社区建设，获得NAX激励的重要方式之外，也同样是一个NAX的重要使用场景：
 \begin{enumerate}
-\item 创建提案（消耗相应的NAX）
-\item 开发提案（开发时会销毁等比的NAX, 提前完成的工作，节省销毁的数量）
-\item 投票通过提案和结果，需要销毁后NAX（通过或以获得120\%返还，失败可以获得110\%的返还）
+  \item 发起提案
+  \item 申领项目
+  \item 项目投票
 \end{enumerate}
 
-推进步骤
-\begin{enumerate}
-\item 补发过去参与过贡献的人的奖励？
-\item 以后获得项目资金的人将获得相应NAX奖励
-\item 增加GN邀请奖励，受邀请的贡献者获得的NAX后，邀请人会获得额外10\%的NAX
-\end{enumerate}
-
-\subsection{星云治理 - 提升社区参与度}
-为了鼓励社区使用NAX作为社区治理的工具，以及鼓励大家社区治理的参与度，我们将设置一些投票场景，部分场景投票将做会有返还奖励。
-投票的场景
+\subsection{星云治理相关}
+当NAX变得很有效时，NAX也有可能成为星云治理的重要工具选择之一，为了鼓励大家社区治理的参与度，这些投票场景可能会增设一些由专项拨款的NAX作为投票激励。这些治理场景可能包括，基金会主席竞选，节点竞选等。
 
 \subsubsection{节点竞选 -- PoD}
+NAX的作为星云贡献激励，Staking的来源，一定程度上是社区贡献的一种凭证，是一个有效地结合主网PoD技术革新的一个有效的技术支持和手段。
+
 \begin{enumerate}[a.]
-  \item 从节点候选人里可以选出节点
-  \item 投票销毁后会返还（若当选，获得120\%返还，失败有110\%返还）
-  \item 参与节点竞选, 需要销毁1000W NAX，具体参与需要再调整
-  \item 成为节点, 被选中成为出块节点后，参与到节点出块，需要质押NAS(无NAX返还）
+  \item 从节点候选人由NAX投票选出来
+  \item 参与节点竞选, 需要销毁相应量的NAX，并质押NAS
+  \item 社区可以众筹成为节点，并拥有PoS Staking的收益
 \end{enumerate}
 
-\subsubsection{理事竞选}
+\subsubsection{社区治理竞选}
 \begin{enumerate}[a.]
-  \item 从候选人里选出相应的理事
-  \item 投票销毁后会返还（若当选，获得120\%返还，失败有110\%返还）
+  \item 参选需要筹集一定量的NAX以及质押NAS
+  \item 可以使用NAX投票产生竞选结果
 \end{enumerate}
 
-
-\subsection{星云生态上币费}
-NAS nano Pro \& Explorer \& DEX等各类生态平台的上币费/手续费
-随着Next DAO的推进以及社区治理的前进，社区里将会出现越来越多的Token和治理尝试。这些币种都将需要相应的工具支持，所需要上NAS nano Pro和Explorer的需求。资源空间有限的情况下，我们可以采取增加上币费的需求，比如需要在NAS nano Pro和Explorer上币的NRC20需要缴纳 500w NAX（参数可调）的上币费。其中20\%归集给NAS nano Pro和Explorer管理团队 （开发者和运营者）80\%会被销毁
+\subsection{星云生态推广}
+星云基金会扶持开发的，基础生态产品是星云链生态使用的重要入口，这里包含现在的，还有将来基金会孵化的星云产品，例如：NAS nano Pro \& Explorer \& Nebulas DEX等。随着Next DAO的推进以及社区治理的前进，社区里将会出现越来越多的NRC20 Token和治理尝试。这些币种都将需要相应的工具支持，所需要上NAS nano Pro和Explorer的需求。资源空间有限的情况下，为了使得星云生态相关的产品推出更多优秀好的项目，将可能会使用NAX作为平台的上币费用。这些收集到的上币费，也将投入到平台的建设当中。
 
 \subsection{社区预留NAS销毁计划}
-与其将3500w NAS一次投票销毁，其实可以把销毁做成一项长期的社区投票活动，由社区来决定这个事情的发生。
+星云基金会曾提议销毁社区预留的3500w NAS，这个也将可能成为NAX的一个使用场景，具体是否销毁，销毁方式，如何销毁都会征求社区的意见。NAX只是会提供一个抛砖引玉的方案，例如：每个自然月1号发起一次使用NAX的投票销毁社区预留剩余NAS总量的 \(\alpha\) \% ， \(\alpha\) \% 是当前NAS 质押率占流通量的份额。
 
-销毁细节：
-
-每个自然月1号发起一次投票销毁社区预留剩余NAS总量的 \(\alpha\) \% ， \(\alpha\) \% 是当前NAS 质押率占流通量的份额。
-
-投票销毁通过细节：
-
-\begin{enumerate}[a.]
-  \item 投票需要满足 \(\alpha\) \%的现行NAX总量，才合格
-  \item 支持销毁的比例超出50\%
-  \item 投票销毁，只返还50\%
-\end{enumerate}
