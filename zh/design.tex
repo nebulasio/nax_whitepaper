@@ -46,15 +46,15 @@ M * V = P * T
    \item \(P_{i,j}\): 第\(i\)期用户\(j\)的质押量
    \item \(T_{i,j}\): 第\(i\)期用户\(j\)的质押时间
    \item \(C_i\): 第\(i\)期初始总增发量，\(C_i=C_0 \mu^i\)，增发衰减系数$\mu=0.983$
-   \item \(\lambda_i\): 第\(i\)期增发比例，\(\lambda_i = f(x_i)\)，\(x_i = \sum_j P_{i,j} T_{i,j}\)，其中
+   \item \(\lambda_i\): 第\(i\)期增发比例，\(\lambda_i = f(x_i)\)，总质押量\(x_i = \sum_j P_{i,j} T_{i,j}\)，其中
      \begin{equation}
        f(x) = \frac{x^2}{x_c^2+x^2}
      \end{equation}
-     其中\(x_c\)是一个常数，为\(x_i\)比较典型的取值，该函数的特点如图\ref{func}所示。可见该函数的取值在0到1之间，随\(x\)的增大而增大并不断趋于1，在\(x_c\)之前函数值随\(x\)的增大而较快地增大，而在\(x_c\)之后函数值随\(x\)的增大而缓慢增大。
+     其中\(x_c\)是一个常数，为总质押量比较典型的取值，增发比例与总质押量的关系如图\ref{func}所示。可见增发比例的取值在0到1之间，随总质押量的增大而增大并不断趋于1，在\(x_c\)之前增发比例随总质押量的增大而较快地增大，而在\(x_c\)之后增发比例随总质押量的增大而缓慢增大。
     \begin{figure}
       \centering
       \includegraphics[scale=0.4]{../common/fx.png}
-      \caption{函数\(f(x)\)曲线}\label{func}
+      \caption{增发比例随总质押量变化的函数曲线}\label{func}
     \end{figure}
   %\item 质押池相比总流通量的比率：$\alpha$
 \end{enumerate}
