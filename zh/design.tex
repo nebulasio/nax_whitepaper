@@ -48,24 +48,36 @@ NAX的核心系统将以每6,000高度（一天左右）作为一个增发周期
 公式如下：
 
 \begin{equation}
-  K_{i,j} = \frac{P_{i,j} T_{i,j}}{\sum_j P_{i,j} T_{i,j}} \lambda_i C_i
+  K_{i,j} = \frac{P_{i,j} f(T_{i,j})}{\sum_j P_{i,j} f(T_{i,j})} \lambda_i C_i
 \end{equation}
 
 其中，
 \begin{enumerate}
    \item \(K_{i,j}\): 第\(i\)期用户\(j\)获得的Token数量
    \item \(P_{i,j}\): 第\(i\)期用户\(j\)的质押量
-   \item \(T_{i,j}\): 第\(i\)期用户\(j\)的质押时间
+   \item \(f(T_{i,j})\): 第\(i\)期用户\(j\)的质押的有效权重
+   \item \(T_{i,j}\): 第\(i\)期用户\(j\)的质押总高度（从质押时开始计算）
    \item \(\lambda_i\): 第\(i\)期增发比例
    \item \(C_i\): 第\(i\)期增发池，\(C_i = C_0 \mu^i + C_{i-1} (1-\lambda_{i-1})\)，包含两部分。第一部分为基础部分，每一期不断衰减，衰减系数$\mu=0.9981$。第二部分为上一期增发池中的剩余部分。
 \end{enumerate}
 
-增发比例\(\lambda_i\)与质押率\(x_i = \sum_j P_{i,j} T_{i,j}/(P_\text{max}T_\text{max})\)相关，
-其中\(P_\text{max}\)为NAS总流通量，\(T_\text{max}\)为一周期的时间。增发比例与质押率的函数关系为
+质押的有效权重与质押总高度的函数\(f(T)\)的形式为
+  \begin{equation}
+    f(T) = \frac{T}{T+57600}
+  \end{equation}
+该函数如图\ref{weight}所示。可见有效权重的值在0到1之间，随质押总高度的增加而不断接近1，质押总高度为518400（约3个月）时有效权重为0.9。
+ \begin{figure}
+   \centering
+   \includegraphics[scale=0.4]{../common/weight.png}
+   \caption{质押的有效权重与质押总高度的关系}\label{weight}
+ \end{figure}
+
+增发比例\(\lambda_i\)与质押率\(x_i\)（总质押量与总流通量之比）相关，
+增发比例与质押率的函数关系为
   \begin{equation}
     \lambda_i = \frac{32}{21} x_i^3 - \frac{136}{35} x_i^2 + \frac{353}{105} x_i
   \end{equation}
-  增发比例与质押率的关系如图\ref{func}所示。可见增发比例的取值在0到1之间，质押率为30\%时增发比例为70\%，质押率为50\%时增发比例为90\%。
+增发比例与质押率的关系如图\ref{func}所示。可见增发比例的取值在0到1之间，质押率为30\%时增发比例为70\%，质押率为50\%时增发比例为90\%。
  \begin{figure}
    \centering
    \includegraphics[scale=0.4]{../common/fx.png}

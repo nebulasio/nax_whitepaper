@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.20)  5 AUG 2019 14:16
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.20)  5 AUG 2019 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3365,36 +3365,41 @@ File: ../common/Nebulas.png Graphic file (type QTm)
 <use  "../common/Nebulas.png" > [4]
 File: ../common/Nebulas.png Graphic file (type QTm)
  <use  "../common/Nebulas.png" > [5]
+File: ../common/weight.png Graphic file (type QTm)
+
+<use  "../common/weight.png" >
 File: ../common/fx.png Graphic file (type QTm)
-
-<use  "../common/fx.png" >
+ <use  "../common/fx.png" >
 File: ../common/ch/everyday.pdf Graphic file (type QTm)
- <use  "../common/ch/everyday.pdf" >
+
+<use  "../common/ch/everyday.pdf" >
 File: ../common/ch/acc.pdf Graphic file (type QTm)
-
-<use  "../common/ch/acc.pdf" >
-File: ../common/Nebulas.png Graphic file (type QTm)
- <use  "../common/Nebulas.png" > [6]
+ <use  "../common/ch/acc.pdf" >
 File: ../common/Nebulas.png Graphic file (type QTm)
 
-<use  "../common/Nebulas.png" > [7]
+<use  "../common/Nebulas.png" > [6]
+File: ../common/Nebulas.png Graphic file (type QTm)
+ <use  "../common/Nebulas.png" > [7]
 File: ../common/ch/nax.pdf Graphic file (type QTm)
- <use  "../common/ch/nax.pdf" >)
-(./scenario.tex
-File: ../common/Nebulas.png Graphic file (type QTm)
- <use  "../common/Nebulas.png" > [8]
+
+<use  "../common/ch/nax.pdf" >) (./scenario.tex
 File: ../common/Nebulas.png Graphic file (type QTm)
 
-<use  "../common/Nebulas.png" > [9])
+<use  "../common/Nebulas.png" > [8]
 File: ../common/Nebulas.png Graphic file (type QTm)
- <use  "../common/Nebulas.png" > [10]
+ <use  "../common/Nebulas.png" > [9]
 File: ../common/Nebulas.png Graphic file (type QTm)
 
-<use  "../common/Nebulas.png" > [11]
+<use  "../common/Nebulas.png" > [10])
+File: ../common/Nebulas.png Graphic file (type QTm)
+ <use  "../common/Nebulas.png" > [11]
+File: ../common/Nebulas.png Graphic file (type QTm)
+
+<use  "../common/Nebulas.png" > [12]
 No file main.bbl.
 (./changelog.tex)
 File: ../common/Nebulas.png Graphic file (type QTm)
- <use  "../common/Nebulas.png" > [12]
+ <use  "../common/Nebulas.png" > [13]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
  (./main.aux)
@@ -3411,12 +3416,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 52121 strings out of 493005
- 1210883 string characters out of 6134595
+ 52124 strings out of 493005
+ 1210921 string characters out of 6134595
  1419210 words of memory out of 5000000
- 55411 multiletter control sequences out of 15000+600000
+ 55413 multiletter control sequences out of 15000+600000
  8805 words of font info for 53 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 64i,15n,96p,10439b,4318s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,16n,96p,10439b,4313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (15 pages).
+Output written on main.pdf (16 pages).
