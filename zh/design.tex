@@ -83,16 +83,54 @@ NAX的核心系统将以每6,000高度（一天左右）作为一个增发周期
    \includegraphics[scale=0.4]{../common/fx.png}
    \caption{增发比例与质押率的关系}\label{func}
  \end{figure}
- \begin{figure}
-   \centering
-   \includegraphics[scale=0.4]{../common/ch/everyday.pdf}
-   \caption{每日增发衰减示意图}
- \end{figure}
- \begin{figure}
-   \centering
-   \includegraphics[scale=0.4]{../common/ch/acc.pdf}
-   \caption{累积增发NAX数量}\label{acc}
- \end{figure}
+
+
+\begin{figure}
+\centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = left,
+        xlabel = {周期数},
+        ylabel = {每日预发行NAX数量},
+    ]
+    \addplot [
+        domain=-0:1200, 
+        samples=100,
+        color=red,
+    ]
+    {1.9*10^7*0.9981^x};
+
+    \end{axis}
+    \end{tikzpicture}
+    \caption{每日预发行NAX数量与周期关系}\label{acc0}
+\end{figure}
+
+\begin{figure}
+\centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = left,
+        xlabel = {周期数},
+        ylabel = {累积预发行NAX数量},
+    ]
+    \addplot [
+        domain=-0:2000, 
+        samples=400, 
+        color=red,
+    ]
+    {10^10*(1 - 0.9981^(x+1))};
+
+    \addplot [
+        domain=-0:2000, 
+        samples=400, 
+        color=blue,
+    ]
+    {10^10};
+    \end{axis}
+    \end{tikzpicture}
+\caption{累积增发NAX数量与周期关系}\label{acc1}
+\end{figure}
+
 
 由于每期增发池中未发放的部分滚入下一期增发池中，因此总发行量为固定值
 \begin{equation}
