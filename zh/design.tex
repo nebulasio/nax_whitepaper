@@ -66,23 +66,60 @@ NAX的核心系统将以每6,000高度（一天左右）作为一个增发周期
     f(T) = 1 - \frac{\sqrt{(aT+b)^2+c^2}-(aT+b)}{2}
   \end{equation}
 其中\(a=0.005\)，\(b=-0.3\)，\(c=0.2\)，该函数如图\ref{weight}所示。可见有效权重的值在0.67到1之间，随质押周期数的增加而不断接近1，质押周期数为30（约1个月）时有效权重为0.8，质押周期数为60（约2个月）时有效权重为0.9，质押周期数为90（约3个月）时有效权重为0.95。
- \begin{figure}
-   \centering
-   \includegraphics[scale=0.4]{../common/weight.png}
-   \caption{质押的有效权重与质押周期数的关系}\label{weight}
- \end{figure}
+
+\begin{figure}
+\centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = left,
+        xlabel = {质押周期数},
+        ylabel = {有效权重},
+    ]
+    \addplot [
+        domain=0:365,
+        samples=200,
+        color=blue,
+    ]
+    {1-(sqrt((0.005*x-0.3)^2+0.2^2)-(0.005*x-0.3))/2};
+
+    \addplot [
+        domain=-0:365, 
+        samples=200, 
+        color=red,
+    ]
+    {1};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{质押的有效权重与质押周期数的关系}\label{weight}
+\end{figure}
 
 增发比例\(\lambda_i\)与质押率\(x_i\)（总质押量与总流通量之比）相关，
 增发比例与质押率的函数关系为
   \begin{equation}
-    \lambda_i = \frac{32}{21} x_i^3 - \frac{136}{35} x_i^2 + \frac{353}{105} x_i
+    \lambda_i = l x_i^3 + m x_i^2 + n x_i
   \end{equation}
 增发比例与质押率的关系如图\ref{func}所示。可见增发比例的取值在0到1之间，质押率为30\%时增发比例为70\%，质押率为50\%时增发比例为90\%。
- \begin{figure}
-   \centering
-   \includegraphics[scale=0.4]{../common/fx.png}
-   \caption{增发比例与质押率的关系}\label{func}
- \end{figure}
+
+
+\begin{figure}
+\centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = left,
+        xlabel = {质押率$x_i$},
+        ylabel = {发放比率$\lambda_i$},
+    ]
+    \addplot [
+        domain=0:1,
+        samples=100,
+        color=blue,
+    ]
+    {1.52*x^3-3.88*x^2+3.36*x};
+
+    \end{axis}
+    \end{tikzpicture}
+    \caption{增发比例与质押率的关系}\label{func}
+\end{figure}
 
 
 \begin{figure}
