@@ -115,7 +115,12 @@ NAX的核心系统将以每6,000高度（一天左右）作为一个增发周期
         color=blue,
     ]
     {1.52*x^3-3.88*x^2+3.36*x};
-
+    \addplot [
+        domain=-0:1, 
+        samples=100, 
+        color=red,
+    ]
+    {1};
     \end{axis}
     \end{tikzpicture}
     \caption{增发比例与质押率的关系}\label{func}
