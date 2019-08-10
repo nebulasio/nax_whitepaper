@@ -6,3 +6,5 @@ dist/*
 main.pdf
 *.toc
 *.out
+*.bbl
+*.blg
