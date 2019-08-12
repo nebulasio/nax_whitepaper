@@ -1,6 +1,6 @@
 cd ./zh && xelatex main.tex && bibtex main.aux && xelatex main.tex && xelatex main.tex
 cd ../
-cp ./zh/main.pdf dist/white_paper_zh.pdf
+cp ./zh/main.pdf dist/main.pdf
 
 
 #cd ./en && xelatex main.tex && bibtex main.aux && xelatex main.tex && xelatex main.tex
