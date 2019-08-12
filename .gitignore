@@ -1,7 +1,10 @@
 .DS_Store
 *.swp
-dist/*
 *.aux
 *.log
 main.pdf
 *.toc
+*.out
+*.bbl
+*.blg
+dist/main.pdf
