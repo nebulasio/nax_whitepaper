@@ -41,14 +41,14 @@ The maximum amount of NAX tokens projected to be released is 10 billion(\(10^{10
 \centering
     \begin{tikzpicture}
     \begin{axis}[
-        Axis lines = left,
-        Xlabel = {number of cycles},
-        Ylabel = {number of pre-release NAX per day},
+        axis lines = left,
+        xlabel = {number of cycles},
+        ylabel = {number of pre-release NAX per day},
     ]
     \addplot [
-        Domain=-0:4000, 
-        Samples=1000,
-        Color=red,
+        domain=-0:4000, 
+        samples=1000,
+        color=red,
     ]
     {1.0*10^7*0.999^x};
 
@@ -63,21 +63,21 @@ The maximum amount of NAX tokens projected to be released is 10 billion(\(10^{10
 \centering
     \begin{tikzpicture}
     \begin{axis}[
-        Axis lines = left,
-        Xlabel = {number of cycles},
-        Ylabel = {accumulate pre-issued NAX quantity},
+        axis lines = left,
+        xlabel = {number of cycles},
+        ylabel = {accumulate pre-issued NAX quantity},
     ]
     \addplot [
-        Domain=-0:4000, 
-        Samples=1000, 
-        Color=red,
+        domain=-0:4000, 
+        samples=1000, 
+        color=red,
     ]
     {10^10*(1 - 0.999^(x+1))};
 
     \addplot [
-        Domain=-0:4000, 
-        Samples=1000, 
-        Color=blue,
+        domain=-0:4000, 
+        samples=1000, 
+        color=blue,
     ]
     {10^10};
     \end{axis}
@@ -90,7 +90,7 @@ The so-called dynamic distribution model means that on the basis of pre-issuance
 
 Therefore, for each period of $i$, the system will pre-issue $C_i$ NAX assigned to the user currently being pledged. When the system distributes, it will determine a distribution coefficient $\lambda_i$ based on the current pledge rate level r (the total amount of pledge NAS currently involved / total NAS circulation), and actually distribute $C_i$$\lambda_i$ (0< $\lambda_i$<1) NAX. Remaining undistributed $C_i$(1 - $\lambda$) NAX will roll over which in turn increases the total amount of pre-issued tokens for the following cycle. Therefore, the \(i\) period issuance pool, \(C_i = C_0 \mu^i + C_{i-1} (1-\lambda_{i-1})\), consists of two parts: The first part is the basic part, and each period is continuously attenuated with an attenuation coefficient of $\mu$. The second part is the remainder of the previous issuance pool.
 
-Among them, the distribution coefficient \ (\lambda_i \) and the pledge rate \ (r_i \) function relationship as shown in the following formula. For specific parameters, please refer to the appendix. The function relationship is shown in \ref{func}.
+Among them, the distribution coefficient \(\lambda_i\) and the pledge rate \(r_i\) function relationship as shown in the following formula. For specific parameters, please refer to the appendix. The function relationship is shown in \ref{func}.
 
   \begin{equation}
     \lambda_i = l r_i^3 + m r_i^2 + n r_i
@@ -100,20 +100,20 @@ Among them, the distribution coefficient \ (\lambda_i \) and the pledge rate \ (
 \centering
     \begin{tikzpicture}
     \begin{axis}[
-        Axis lines = left,
-        Xlabel = {pledge rate $r_i$},
-        Ylabel = {distribution coefficient $\lambda_i$},
+        axis lines = left,
+        xlabel = {pledge rate $r_i$},
+        ylabel = {distribution coefficient $\lambda_i$},
     ]
     \addplot [
-        Domain=0:1,
-        Samples=100,
-        Color=blue,
+        domain=0:1,
+        samples=100,
+        color=blue,
     ]
     {1.52*x^3-3.88*x^2+3.36*x};
     \addplot [
-        Domain=-0:1, 
-        Samples=100, 
-        Color=red,
+        domain=-0:1, 
+        samples=100, 
+        color=red,
     ]
     {1};
     \end{axis}
@@ -148,21 +148,21 @@ The parameters $a$, $b$, $c$, etc... in the formula are discussed in the appendi
 \centering
     \begin{tikzpicture}
     \begin{axis}[
-        Axis lines = left,
-        Xlabel = {number of pledge cycles},
-        Ylabel = {effective weight},
+        axis lines = left,
+        xlabel = {number of pledge cycles},
+        ylabel = {effective weight},
     ]
     \addplot [
-        Domain=0:365,
-        Samples=200,
-        Color=blue,
+        domain=0:365,
+        samples=200,
+        color=blue,
     ]
     {1-(sqrt((0.005*x-0.3)^2+0.2^2)-(0.005*x-0.3))/2};
 
     \addplot [
-        Domain=-0:365, 
-        Samples=200, 
-        Color=red,
+        domain=-0:365, 
+        samples=200, 
+        color=red,
     ]
     {1};
     \end{axis}
