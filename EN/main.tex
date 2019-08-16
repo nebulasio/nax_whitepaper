@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}  
+\input{../common/common.tex}
+\usepackage{indentfirst}
+
+
+\setCJKmainfont[BoldFont = STSongti-SC-Bold]{STSongti-SC-Regular}
+\setCJKfamilyfont{hei}{SIL-Hei-Med-Jian}		%宋体
+\setCJKfamilyfont{song}{SimSun}		%宋体
+\setCJKfamilyfont{kai}{Kaiti}		%楷体
+\setCJKfamilyfont{fang}{song}	%仿宋
+\setCJKfamilyfont{li}{song}			%隶书
+\setCJKfamilyfont{you}{Yuanti}		%幼圆
+
+\newcommand{\song}{\CJKfamily{song}}	%宋体
+\newcommand{\hei}{\CJKfamily{hei}}	%黑体
+\newcommand{\kai}{\CJKfamily{kai}}	%楷体
+\newcommand{\fs}{\CJKfamily{fang}}	%仿宋
+\newcommand{\li}{\CJKfamily{li}}		%隶书
+\newcommand{\you}{\CJKfamily{you}}	%幼圆
+\newcommand{\reffig}[1]{图\ref{#1}}
+\newcommand{\refsec}[1]{\S \ref{#1}}
+
+\onehalfspacing   % ----------Set 1.5 times line spacing 
+
+%\parindent=20pt  % -------------------The first line is indented.
+\setlength{\parindent}{2.1em}
+\setlength{\parskip}{0.3\baselineskip}
+\newcommand{\dom}{{\; \texttt{dom}\;}}
+\newcommand{\xpcomment}[1]{{\color{blue} #1}}
+
+\setCJKsansfont[BoldFont = STHeitiSC-Medium]{STHeitiSC-Light}
+
+
+\newtheorem{property}{Features}
+%\addbibresource{reference.bib}
+
+\begin{document}
+\pagestyle{empty}
+\renewcommand{\contentsname}{catalog}
+\renewcommand{\abstractname}{Abstract}
+\renewcommand{\refname}{References}
+%\renewcommand{\nomname}{Glossary (sorted by initials)}
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\appendixname}{Appendix}
+\renewcommand{\proofname}{proof}
+
+%\pagecolor{\pcolor}
+
+\begin{titlepage}
+  \begin{center}
+    \vspace*{5.5cm}
+    \includegraphics[scale=0.4]{../common/Nebulas.png}
+    \vspace{0.5cm}
+
+
+    \textbf{\huge{Nebulas NAX White Paper}}
+
+    \vspace{0.5cm}
+    Nebulas Foundation 
+    \vfill
+    July, 2019 \\
+    Version :0.0.1
+    \textbf{}
+  \end{center}
+
+\end{titlepage}
+\setcounter{page}{0}
+\tableofcontents
+\newpage
+\setcounter{page}{1}
+\pagestyle{fancy}
+\vspace*{0.01cm}
+\input{vision.tex}
+\input{dao.tex}
+\input{design.tex}
+\input{scenario.tex}
+\input{conclusion.tex}
+%\printbibliography
+\newpage
+\bibliography{reference}
+
+\newpage 
+\begin{appendices}
+\input{analysis.tex}
+%\input{supervision.tex}
+\input{changelog.tex}
+\end{appendices}
+\end{document}
