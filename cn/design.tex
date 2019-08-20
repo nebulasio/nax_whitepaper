@@ -1,43 +1,39 @@
 \section{NAX通证经济设计}
 \subsection{设计目标}
-设计公链的通证经济的目标除了更好的激活生态外，还需要在生态中起到积极正向的博弈作用。公链的通证经济的核心设计应当符合一定的原则和目标，例如：公平受益、正向激励、逻辑简洁，场景多样等。总而言之，公链的通证经济需要公正的获取场景和多样的消耗场景，使得通证拥有更高的持有价值，从而促进公链的发展和壮大，一个良好的公链通证经济，会使得整个生态变得更加有活力和动力。总结起来NAX的设计目标是：
+公链通证经济设计的目标除了形成正向博弈、激活生态之外还应当符合一定的原则，例如：公平受益、正向激励、逻辑简洁，场景多样等。总而言之，公链的通证经济需要公正的获取场景和多样的消耗场景，拥有较高的持有价值，从而促进公链的发展和壮大，使得整个生态变得更加有活力和动力。总结起来NAX的设计目标是：
 
-\begin{enumerate}[\hspace{2cm}(a)]
+\begin{enumerate}[\hspace{2cm}(i)]
     \item 公平受益
     \item 正向激励
-    \item 简洁易懂
+    \item 简洁有效
     \item 场景丰富
-    \item 智能有效
 \end{enumerate}
 
-\subsection{核心逻辑}
+\subsection{核心机制}
 
-\subsubsection{资产公平性与正当性}
-公链通证经济的有效性的根本来自于资产获得的公平性和正当性。资产的获取规则应当简单透明，对绝大多数人应当是信息对称的。在公链的通证经济中，拥有的资产具有相对的公平性和正当性，因此通过质押（Staking）的方法作为获取通证权益的主要途径是符合要求的。不会因为规则不清晰，或者漏洞导致资产分配不理想的现象，并使得博弈的总体结果是有利于公链生态发展的方法。在星云的生态当中，质押NAS，以获取相应的NAX权益，这在星云生态通证经济体内是公平公正的。
+\subsubsection{资产公平性}
+公链通证经济的有效性的根本来自于资产获得的公平性和正当性。资产的获取规则应当简单透明，对绝大多数人应当是信息对称的。在星云生态中，用户所持有的NAS资产具有相对的公平性和正当性，因此通过质押（Staking）NAS的方式作为获取通证权益的主要途径是符合要求的。不会因为规则不清晰、信息不对称，或者系统漏洞导致资产分配不公平的现象，并使得博弈的结果是有利于公链生态发展的方法。
 
 \subsubsection{去中心化质押 - dStaking}
-传统的中心化的质押方式是用户将资产转入到智能合约当中暂为保管，资产安全问题维系在一个智能合约里，合约资产安全性问题历史上屡见不鲜，2016年以太坊的The DAO攻击事件，攻击者利用了合约漏洞使得投资者产生巨大的经济损失，也使得投资者对合约安全性产生怀疑。另一方面，质押同时也给公链项目方带来非常大的压力，大量资产保存在一个合约当中，使得合约的管理及安全性成为一个非常大的发展瓶颈。区块链上的资产是确权的，质押只是锁住流动性，并不是资产的确权性（虽然可以通过调用合约方法取回）转移到合约里。
+传统的中心化的质押方式是用户将资产转入到智能合约当中暂为保管，资产安全问题维系在一个智能合约中，合约资产安全性问题历史上屡见不鲜，攻击者利用了合约漏洞使得投资者产生巨大的经济损失，也使得投资者对合约安全性产生担忧。另一方面，质押同时也给公链项目方带来非常大的压力，大量资产保存在一个合约当中，使得合约的管理及安全性成为一个发展瓶颈。区块链核心是去中心化及资产的确权性，质押的目的是减少流动性，并不是获得资产的本身。
 
-通过设计NAX的机制，我们提出去中心化质押（dStaking - decentralized Staking），如图\ref{fig:dStaking}所示，在确保用户资产的确权仍然属于用户的前提下，用户与质押合约签定的锁住流动性的契约记录在合约上。质押合约的作用只是通过链上随机检查契约的有效性来保持用户的质押有效性。当地址的余额大于等于契约的数额的时候，被认为是有效质押。
-
-dStaking的优势是：
+我们提出了一个新式的质押方式：去中心化质押（dStaking - decentralized Staking），如图\ref{fig:dStaking}所示，在确保用户资产仍然属于用户的前提下，用户与质押合约签定的质押契约记录在合约上。质押合约的作用只是通过链上随机检查用户是否仍在履行契约。当地址的余额大于等于契约的数额的时候，被认为是有效质押，否则将视为退出质押。dStaking的优势在于：
 \begin{enumerate}[\hspace{2cm}(a)]
-    \item 确保用户的资产确权
-    \item 激励更多的用户参与质押
-    \item 资产安全且去中心化
-    \item 资产的确权性与资产流动性分离
+    \item 保障用户对资产确权
+    \item 提高质押积极性
+    \item 提高资产安全性
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
   \centering
-    \includegraphics[width=1\textwidth]{../common/dStaking.pdf}
-    \caption{dStaking示意图 \label{fig:dStaking}}
+  \includegraphics[width=1\textwidth]{../common/dStaking.pdf}
+  \caption{中心化质押 vs 去中心化质押\label{fig:dStaking}}
 \end{figure}
 
 \subsubsection{NAX发行模型 - NDM}
-如上述提到的，在保障资产公平性与正当性基础上，确保用户质押资产所有权神圣不可侵犯的前提下，用户贡献出资产的流动性以获取相应的生态权益。我们称这种新式发行模式为NDM（Nebulas Devotion Mining）。NAX的预计发行总量上限是100亿（\(10^{10}\)。 发行周期为每6,000高度（一天左右），每周期预发行数量呈递减规律，衰减系数$\mu=0.999$，预计12年左右发放完全。预发行NAX数量随周期数增长的变化图\ref{dist}所示,累积预发行NAX数量如图\ref{acc}所示。
+在保障资产发行的公平性与正当性基础上，确保用户质押资产所有权神圣不可侵犯的前提下，用户贡献出资产的流动性以获取相应的生态权益，我们称这种新式发行模式为NDM（Nebulas Devotion Mining）。NAX的预计发行总量上限是100亿（\(10^{10}\)。 发行周期为每6,000高度（一天左右），每周期预发行数量呈递减规律，衰减系数$\mu=0.999$，预计12年左右发放完全。预发行NAX数量随周期数增长的变化图\ref{dist}所示，累积预发行NAX数量如图\ref{acc}所示。
 
-\begin{figure}[htbp]
+\begin{figure}[h]
 \centering
 \begin{minipage}[5cm]{.45\textwidth}
 \centering
@@ -90,10 +86,10 @@ dStaking的优势是：
 \subsubsection{动态分发策略}
 动态分发策略是指，系统会根据一些变量决定实际分发NAX的数量，以促进生态的正向博弈。在NAX起初，我们引入质押率影响因子，根据质押率的增加或减少，动态调整实际分发比例。将来根据需要，我们还将引入更博弈的因素。如图\ref{fig:dynamic_dist}所示，周期$i$内系统预分发$C_i$ 个NAX给当前周期内正在质押的用户。在实际分发的过程中，根据当前的质押率水平$\lambda$（参与质押NAS的总量/总体NAS流通总量, 0<$\lambda$<1），实际分发NAX为：$C_0 \mu^i\lambda$。
 
-\begin{figure}[htbp]
+\begin{figure}[h]
   \centering
-    \includegraphics[width=1\textwidth]{../common/dynamic_dist.pdf}
-    \caption{动态分发策略示意图 \label{fig:dynamic_dist}}
+  \includegraphics[width=0.8\textwidth]{../common/dynamic_dist.pdf}
+  \caption{动态分发策略示意图 \label{fig:dynamic_dist}}
 \end{figure}
 
 \subsubsection{周期内分配策略}
@@ -109,7 +105,7 @@ dStaking的优势是：
 \end{equation}
 
 \begin{figure}[h]
-\begin{center}
+\centering
     \begin{tikzpicture}[scale=0.75]
     \begin{axis}[
         axis lines = left,
@@ -132,7 +128,6 @@ dStaking的优势是：
     \end{axis}
     \end{tikzpicture}
 \caption{质押的有效权重与周期数的关系}\label{weight}
-\end{center}
 \end{figure}
 
 公式中的参数$a$，$b$，$c$等将会在附录中讨论。总的来说，同一个周期内，系统会根据质押数量以及相应的质押时间长短来分配发行的总量，以达到公平的效果，即质押数量越多，质押时间越长，所分配到的发行数量也会更多。但同时使得让新进来的质押用户有更高的积极性，新用户的权重也会维系在一个可观的水平上。 该设计会达到以下博弈场景：
@@ -150,6 +145,6 @@ NAX是扩展性的NRC20合约，由一组合约组成，并配合多签合约管
 
 \begin{figure}[h]
   \centering
-    \includegraphics[width=1\textwidth]{../common/nax.pdf}
-    \caption{NAX 合约组件示意图 \label{fig:nax_framework}}
+  \includegraphics[width=0.8\textwidth]{../common/nax.pdf}
+  \caption{NAX 合约组件示意图 \label{fig:nax_framework}}
 \end{figure}
