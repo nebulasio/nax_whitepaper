@@ -7,4 +7,5 @@ main.pdf
 *.out
 *.bbl
 *.blg
-dist/main.pdf
+dist/main_en.pdf
+dist/main_cn.pdf
