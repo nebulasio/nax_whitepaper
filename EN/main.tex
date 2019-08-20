@@ -5,25 +5,25 @@
 
 
 \setCJKmainfont[BoldFont = STSongti-SC-Bold]{STSongti-SC-Regular}
-\setCJKfamilyfont{hei}{SIL-Hei-Med-Jian}		%宋体
-\setCJKfamilyfont{song}{SimSun}		%宋体
-\setCJKfamilyfont{kai}{Kaiti}		%楷体
-\setCJKfamilyfont{fang}{song}	%仿宋
-\setCJKfamilyfont{li}{song}			%隶书
-\setCJKfamilyfont{you}{Yuanti}		%幼圆
+\ setCJKfamilyfont {here} {SIL-Hei-Med-Jian}% 宋体
+\setCJKfamilyfont{song}{SimSun} %宋体
+\ setCJKfamilyfont {kai} {Kaiti}% 楷体
+\setCJKfamilyfont{fang}{song} %Imperial Song
+\setCJKfamilyfont{li}{song} % Lishu
+\setCJKfamilyfont{you}{Yuanti} %Yuanyuan
 
-\newcommand{\song}{\CJKfamily{song}}	%宋体
-\newcommand{\hei}{\CJKfamily{hei}}	%黑体
-\newcommand{\kai}{\CJKfamily{kai}}	%楷体
-\newcommand{\fs}{\CJKfamily{fang}}	%仿宋
-\newcommand{\li}{\CJKfamily{li}}		%隶书
+\newcommand{\song}{\CJKfamily{song}} %宋体
+\newcommand{\hei}{\CJKfamily{hei}} %黑体
+\ newcommand {\ kai} {\ CJKfamily {kai}}% 楷
+\newcommand{\fs}{\CJKfamily{fang}} %Imperial Song
+\newcommand{\li}{\CJKfamily{li}} % Lishu
 \newcommand{\you}{\CJKfamily{you}}	%幼圆
 \newcommand{\reffig}[1]{图\ref{#1}}
 \newcommand{\refsec}[1]{\S \ref{#1}}
 
-\onehalfspacing   % ----------Set 1.5 times line spacing 
+\onehalfspacing % ----------Set 1.5 times line spacing (may make sense, to be adjusted)
 
-%\parindent=20pt  % -------------------The first line is indented.
+%\parindent=20pt % ------------------- The first line is indented, and the English segment is directly 0pt.
 \setlength{\parindent}{2.1em}
 \setlength{\parskip}{0.3\baselineskip}
 \newcommand{\dom}{{\; \texttt{dom}\;}}
@@ -41,8 +41,8 @@
 \renewcommand{\abstractname}{Abstract}
 \renewcommand{\refname}{References}
 %\renewcommand{\nomname}{Glossary (sorted by initials)}
-\renewcommand{\figurename}{Figure}
-\renewcommand{\tablename}{Table}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
 \renewcommand{\baselinestretch}{1.5}
 \renewcommand{\appendixname}{Appendix}
 \renewcommand{\proofname}{proof}
@@ -59,10 +59,10 @@
     \textbf{\huge{Nebulas NAX White Paper}}
 
     \vspace{0.5cm}
-    NextDAO Lab 
-    \vfill
-    August, 2019 \\
-    Version :1.0.0
+    NextDAO Lab
+    \ vfill
+    August 2019\\
+    Version number: 1.0.0
     \textbf{}
   \end{center}
 
@@ -73,19 +73,19 @@
 \setcounter{page}{1}
 \pagestyle{fancy}
 \vspace*{0.01cm}
+%\input{intro.tex}
 \input{vision.tex}
 \input{dao.tex}
 \input{design.tex}
 \input{scenario.tex}
 \input{conclusion.tex}
-%\printbibliography
+% \ Printbibliography
 \newpage
 \bibliography{reference}
 
 \newpage 
 \begin{appendices}
 \input{analysis.tex}
-%\input{supervision.tex}
 \input{changelog.tex}
 \end{appendices}
 \end{document}
