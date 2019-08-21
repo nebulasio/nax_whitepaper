@@ -43,16 +43,16 @@ The maximum amount of NAX tokens that will be released is 10 billion(\(10^{10}\)
 \centering
 \begin{minipage}[5cm]{.45\textwidth}
 \centering
-    \begin{tikzpicture}[scale=0.8]
+    \begin{tikzpicture}[scale=0.7]
     \begin{axis}[
-        Axis lines = left,
-        Xlabel = {number of cycles},
-        Ylabel = {pre-release number of NAX},
+        axis lines = left,
+        xlabel = {number of cycles},
+        ylabel = {pre-release number of NAX},
     ]
     \addplot [
-        Domain=-0:4000, 
-        Samples=1000,
-        Color=red,
+        domain=-0:4000, 
+        samples=1000,
+        color=red,
     ]
     {1.0*10^7*0.999^x};
 
@@ -64,23 +64,23 @@ The maximum amount of NAX tokens that will be released is 10 billion(\(10^{10}\)
 \end{minipage}\qquad
 \begin{minipage}[5cm]{.45\textwidth}
 \centering
-    \begin{tikzpicture}[scale=0.72]
+    \begin{tikzpicture}[scale=0.65]
     \begin{axis}[
-        Axis lines = left,
-        Xlabel = {number of cycles},
-        Ylabel = {accumulate pre-release NAX quantity},
+        axis lines = left,
+        xlabel = {number of cycles},
+        ylabel = {accumulate pre-release NAX quantity},
     ]
     \addplot [
-        Domain=-0:4000,
-        Samples=1000, 
-        Color=red,
+        domain=-0:4000,
+        samples=1000, 
+        color=red,
     ]
     {10^10*(1 - 0.999^(x+1))};
 
     \addplot [
-        Domain=-0:4000, 
-        Samples=1000,
-        Color=blue,
+        domain=-0:4000, 
+        samples=1000,
+        color=blue,
     ]
     {10^10};
     \end{axis}
@@ -92,9 +92,9 @@ The maximum amount of NAX tokens that will be released is 10 billion(\(10^{10}\)
 \subsubsection{Dynamic Distribution Model}
 The dynamic distribution model refers to fact that the system will determine the actual number of NAX to be distributed according to specific variables with the intention to promote a positive economic game. At the beginning of NAX, we will introduce the pledge rate impact factor and dynamically adjusted the actual distribution ratio based on the increase or decrease of the pledge rate. In the future, we will introduce more  factors as needed. As shown in the figure \ref{fig:dynamic_dist}, the system pre-distributes $C_i$ NAX to the users pledging in the current period within the period $i$. In the actual distribution process, according to the current pledge rate level $\lambda$ (total amount of pledge NAS/total NAS circulation, 0<$\lambda$<1), the actual distribution of NAX is: $C_0 \mu ^i\lambda$.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{../common/dynamic_dist.pdf}
+  \includegraphics[width=0.68\textwidth]{../common/dynamic_dist.pdf}
   \caption{Dynamic distribution strategy diagram\label{fig:dynamic_dist}}
 \end{figure}
 
@@ -105,7 +105,7 @@ During a distribution cycle, different number of pledge cycles will result in di
   K_{i,j} = \frac{V_{i,j} f(T_{i,j})}{\sum_j V_{i,j} f(T_{i,j})} \lambda_i C_i
 \end{equation}
 
-Where \(f(T_{i,j})\) is the effective weight function for the pledge of the \(i\) user\(j\). The relationship between the pledge weight and the number of pledge cycles is as follows (the function relationship is shown in \ref{weight}).
+Where \(f(T_{i,j})\) is the effective weight function for the pledge of the \(i\) user\(j\). The relationship between the pledge weight and the number of pledge cycles is as follows (the function relationship is shown in figure \ref{weight}).
 \begin{equation}
   f(T) = 1 - \frac{\sqrt{(aT+b)^2+c^2}-(aT+b)}{2}
 \end{equation}
@@ -114,26 +114,26 @@ Where \(f(T_{i,j})\) is the effective weight function for the pledge of the \(i\
 \centering
     \begin{tikzpicture}[scale=0.75]
     \begin{axis}[
-        Axis lines = left,
-        Xlabel = {number of pledge cycles},
-        Ylabel = {effective weight},
+        axis lines = left,
+        xlabel = {number of pledge cycles},
+        ylabel = {effective weight},
     ]
     \addplot [
-        Domain=0:365,
-        Samples=200,
-        Color=blue,
+        domain=0:365,
+        samples=200,
+        color=blue,
     ]
     {1-(sqrt((0.005*x-0.3)^2+0.2^2)-(0.005*x-0.3))/2};
 
     \addplot [
-        Domain=-0:365, 
-        Samples=200, 
-        Color=red,
+        domain=-0:365, 
+        samples=200, 
+        color=red,
     ]
     {1};
     \end{axis}
     \end{tikzpicture}
-\caption{Relationship between the effective weight of the pledge and the number of cycles}\label{weight}
+\caption{Relationship between the effective weight and the number of cycles}\label{weight}
 \end{figure}
 
 The parameters $a$, $b$, $c$, etc... in the formula are discussed in the appendix. In general, within the same cycle, the system allocates the total amount of additional issuance tokens according to the number of pledges and the corresponding length of the pledge. In order to achieve a fair result, the more pledges and the longer the pledge, the higher the issuance number will be. At the same time, this method makes new pledge users more motivated while motivating existing pledges since the existing addresses weight will be retained at a considerable level. The design will meet the following scenarios:
@@ -149,7 +149,7 @@ In order to facilitate economically better opportunities for investment, incubat
 \subsection{Contract Framework}
 NAX is an extensible NRC20 contract consisting of a set of contracts, data managment and parameters of the entire contract with multi-sign contracts, as shown in detail in \ref{fig:nax_framework}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{../common/nax.pdf}
   \caption{NAX contract component schematic \label{fig:nax_framework}}
