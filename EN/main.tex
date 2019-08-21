@@ -1,51 +1,20 @@
 \documentclass[12pt]{article}
-\usepackage{xeCJK}  
+
 \input{../common/common.tex}
 \usepackage{indentfirst}
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
 
+\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+\newcommand{\refeq}[1]{Equation~\ref{#1}}
+\newcommand{\refsec}[1]{~\S~\ref{#1}}
+\onehalfspacing
 
-\setCJKmainfont[BoldFont = STSongti-SC-Bold]{STSongti-SC-Regular}
-\setCJKfamilyfont{here} {SIL-Hei-Med-Jian}% 宋体
-\setCJKfamilyfont{song}{SimSun} %宋体
-\setCJKfamilyfont{kai} {Kaiti}% 楷体
-\setCJKfamilyfont{fang}{song} %Imperial Song
-\setCJKfamilyfont{li}{song} % Lishu
-\setCJKfamilyfont{you}{Yuanti} %Yuanyuan
-
-\newcommand{\song}{\CJKfamily{song}} %宋体
-\newcommand{\hei}{\CJKfamily{hei}} %黑体
-\newcommand{\kai} {\CJKfamily {kai}}% 楷
-\newcommand{\fs}{\CJKfamily{fang}} %Imperial Song
-\newcommand{\li}{\CJKfamily{li}} % Lishu
-\newcommand{\you}{\CJKfamily{you}}	%幼圆
-\newcommand{\reffig}[1]{Figure\ref{#1}}
-\newcommand{\refsec}[1]{\S \ref{#1}}
-
-\onehalfspacing % ----------Set 1.5 times line spacing (may make sense, to be adjusted)
-
-%\parindent=20pt % ------------------- The first line is indented, and the English segment is directly 0pt.
-\setlength{\parindent}{2.1em}
-\setlength{\parskip}{0.3\baselineskip}
-\newcommand{\dom}{{\; \texttt{dom}\;}}
-\newcommand{\xpcomment}[1]{{\color{blue} #1}}
-
-\setCJKsansfont[BoldFont = STHeitiSC-Medium]{STHeitiSC-Light}
-
-
-\newtheorem{property}{Features}
-%\addbibresource{reference.bib}
+\newtheorem{property}{Property}
 
 \begin{document}
 \pagestyle{empty}
-\renewcommand{\contentsname}{Catalog}
-\renewcommand{\abstractname}{Abstract}
-\renewcommand{\refname}{References}
-%\renewcommand{\nomname}{Glossary (sorted by initials)}
-\renewcommand{\figurename}{Figure}
-\renewcommand{\tablename}{Table}
-\renewcommand{\baselinestretch}{1.5}
-\renewcommand{\appendixname}{Appendix}
-\renewcommand{\proofname}{proof}
 
 %\pagecolor{\pcolor}
 
