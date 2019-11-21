@@ -6,10 +6,10 @@ We set a total circulation limit of 10 billion (\(10^{10}\)) for NAX, so we can 
 \end{equation}
   Let this upper bound be 10 billion (\(10^{10}\)), and solve for \(C_0 = 10^{10}(1-\mu) = 1.0\times10^7\).
 
-\subsection{The Relationship Between Pledge Weight and Age}
-In order to encourage early users to participate in pledging and at the same time encouraging new users to join the pledge, the age weight of the pledge is calculated dynamically. 
+\subsection{The Impact of Staking Age And Distribution}
+In order to encourage early users to participate in pledging and at the same time encouraging new users to join the staking, the age weight of the staking is calculated dynamically. 
 
-As the number of active pledge cycles increase and when the pledge period exceeds $90$, the weight will level off to a peak of $1$, while the starting weight for new users will start at $0.67$. According to the above details and the weight formula in the white paper, the corresponding coefficients can be calculated, where \(a=0.005\), \(b=-0.3\), \(c=0.2\), the effect of the function is shown in the figure\ Ref{weight} is shown.
+As the number of active staking cycles increase and when the staking period exceeds $90$, the weight will level off to a peak of $1$, while the starting weight for new users will start at $0.67$. According to the above details and the weight formula in the white paper, the corresponding coefficients can be calculated, where \(a=0.005\), \(b=-0.3\), \(c=0.2\), the effect of the function is shown in the figure\ Ref{weight} is shown.
 
-\subsection{Additional pledge affects the age of the coin}
-In order to facilitate the increase of pledge amount from the original address, the user only needs to make another contract transaction via the pledge contract. The system will recalculate the average currency age based on the number of past pledge and new pledge value. For example, if a user currently pledges $100$NAS for $10$ cycles, the user pledges an additional $100$ NAS via the smart contract, the new pledge amount is $200$ NAS. The currency age will be averaged from the two pledges of $5$ cycles.
+\subsection{Additional staking affects the age of the coin}
+In order to facilitate the increase of staking amount from the original address, the user only needs to make another contract transaction via the staking contract. The system will recalculate the average currency age based on the number of past staking and new staking value. For example, if a user currently stakings $100$NAS for $10$ cycles, the user stakings an additional $100$ NAS via the smart contract, the new staking amount is $200$ NAS. The currency age will be averaged from the two stakings of $5$ cycles.
