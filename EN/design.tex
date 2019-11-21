@@ -11,11 +11,11 @@ In addition to forming a positive economic game and increasing ecosystem activit
 
 \subsection{Core Mechanism}
 
-\subsubsection{Asset Fairness}
-The effectiveness of a public chain's token economy comes from the fairness and legitimacy of asset acquisition. The requirements for acquiring assets should be simple, transparent and an identical process for the vast majority of people. In the Nebulas economy, NAS assets owned by users are relatively fair and legitimate and due to this, the primary way to obtain equity of a token is via Pledging (staking) NAS. Equity obtainment must not be due to unclear requirements or loopholes existing which lead to the phenomenon of poor asset allocation. The overall result of obtainment must be conducive to improved ecosystem development on the public chain.
+\subsubsection{Equality Fairness}
+The effectiveness of a public chain's token economy comes from the fairness and legitimacy of asset acquisition. The requirements for acquiring assets should be simple, transparent and an identical process for the vast majority of people. In the Nebulas economy, NAS assets owned by users are relatively fair and legitimate and due to this, the primary way to obtain additional tokens of a token is via Staking NAS. Equity token issuance must not be due to unclear requirements or loopholes existing which lead to the phenomenon of poor asset allocation. The overall result of token issurance must be conducive to improved ecosystem development on the public chain.
 
 \subsubsection{Decentralized Staking - dStaking}
-The traditional centralized staking method requires users to transfer assets into smart contracts for temporary custody. Asset security issues are maintained in a smart contract and unfortunately, smart contract asset security issues are common in the history of blockchain where hackers exploit contract loopholes and as a result the investors suffer large economic loss. 
+The traditional centralized staking method requires users to transfer assets into smart contracts for temporary custody. Asset security issues are maintained in a smart contract and unfortunately, smart contract asset security issues are common in the history of blockchain where hackers exploit contract loopholes and as a result the token holder suffer large economic loss. 
 
 Due to this, pledging also puts great pressure on public chain project parties since a large number of assets are kept in a smart contract which makes them targets. Due to this, the management and security of smart contracts is a large development bottleneck. All assets on the blockchain are genuine and pledging simply locks in the liquidity of that asset - it does not validate the ownership of the asset (although it can be retrieved by calling the contract method) once transferred to the contract.
 
@@ -35,7 +35,7 @@ The advantages of dStaking include:
 \end{figure}
 
 \subsubsection{NAX Distribution Model - NDM}
-As mentioned above, on the basis of safeguarding the equity and legitimacy of assets, and ensuring the inviolable ownership of stakingd assets, the user contributes the liquidity of their assets and in return, they obtain corresponding ecological rights and interests. We call this new mode of token issuance "NDM" (Nebulas Devotional Mining). 
+As mentioned above, on the basis of safeguarding the equity and legitimacy of assets, and ensuring the inviolable ownership of staked assets, the user contributes the liquidity of their assets and in return, they obtain corresponding for participating in the ecosystem development. We call this new mode of token issuance "NDM" (Nebulas Devotional Mining). 
 
 The maximum amount of NAX tokens that will be released is 10 billion(\(10^{10}\)) with an issuance cycle of every 6,000 blocks (approximately once per day tokens will be distributed). The number of tokens issued per cycle decreases with an attenuation coefficient of $\mu=0.999$ (reduction of 0.001\% every cycle) which leads to distribution completion in about 12 years. The number of pre-release NAX increases with the number of cycles, as shown in \ref{dist} and the cumulative number of pre-release NAXs is shown in \ref{acc}.
 
@@ -99,7 +99,7 @@ The dynamic distribution model refers to fact that the system will determine the
 \end{figure}
 
 \subsubsection{Distribution cycle}
-During a distribution cycle, different number of staking cycles will result in different distribution weights. The system determines the final NAX distribution amount based on the staking quantity of each stakingd user $V_{i, j}$ and the staking weight \(f(T_{i, j})\). If the $N$ address is being validly stakingd during the $i$ period, the $j$ address staking is $V_{i,j}$, and the effective staking period is $T_{i,j}$. Therefore, the number of NAXs that the address can be distributed to is $K_{i,j}$ as shown in the following formula.
+During a distribution cycle, different number of staking cycles will result in different distribution weights. The system determines the final NAX distribution amount based on the staking quantity of each staked user $V_{i, j}$ and the staking weight \(f(T_{i, j})\). If the $N$ address is being validly staked during the $i$ period, the $j$ address staking is $V_{i,j}$, and the effective staking period is $T_{i,j}$. Therefore, the number of NAXs that the address can be distributed to is $K_{i,j}$ as shown in the following formula.
 
 \begin{equation}
   K_{i,j} = \frac{V_{i,j} f(T_{i,j})}{\sum_j V_{i,j} f(T_{i,j})} \lambda_i C_i
@@ -136,15 +136,15 @@ Where \(f(T_{i,j})\) is the effective weight function for the staking of the \(i
 \caption{Relationship between the effective weight and the number of cycles}\label{weight}
 \end{figure}
 
-The parameters $a$, $b$, $c$, etc... in the formula are discussed in the appendix. In general, within the same cycle, the system allocates the total amount of additional issuance tokens according to the number of stakings and the corresponding length of the staking. In order to achieve a fair result, the more stakings and the longer the staking, the higher the issuance number will be. At the same time, this method makes new staking users more motivated while motivating existing stakings since the existing addresses weight will be retained at a considerable level. The design will meet the following scenarios:
+The parameters $a$, $b$, $c$, etc... in the formula are discussed in the appendix. In general, within the same cycle, the system allocates the total amount of additional issuance tokens according to the number of stakings and the corresponding length of the staking. In order to achieve a fair result, the more stakings and the longer the staking, the higher the issuance number will be. At the same time, this method increases the motivational levels of new staking users while motivating existing stakers since the existing addresses weight will be retained at a considerable level. The design will meet the following scenarios:
 
 \begin{enumerate}[\hspace{1cm}(a)]
   \item Early users involved in staking have a greater probability of receiving more issuance.
-  \item As the staking rate increases, the number of system issuance will increase accordingly to encourage more people to join the staking.
+  \item As the staking rate increases, the number of system issuance will increase accordingly to encourage more people to join the staking system.
 \end{enumerate}
 
 \subsubsection{NAX Ecosystem Fund Pool}
-In order to facilitate economically better opportunities for investment, incubation, support and other activities, a NAX eco-fund pool will be established. During the actual distribution process, the system will distribute it to staking users and deduct $5\%$ of the pool of funds which is subject to community supervision. The specific content of the event will be disclosed after the publication of the white paper.
+In order to facilitate economically better opportunities for development, incubation, support and other activities, a NAX eco-fund pool will be established. During the actual distribution process, the system will distribute it to staking users and deduct $5\%$ of the pool of funds held by the Nebulas Foundation are subject to community supervision. The specific content of the event will be disclosed after the publication of the white paper.
 
 \subsection{Contract Framework}
 NAX is an extensible NRC20 contract consisting of a set of contracts, data managment and parameters of the entire contract with multi-sign contracts, as shown in detail in \ref{fig:nax_framework}.
